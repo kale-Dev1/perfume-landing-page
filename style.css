@@ -1,0 +1,135 @@
+:root {
+  --darkcyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --verydarkblue: hsl(212, 21%, 14%);
+  --darkgrayishblue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream);
+
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.pic-container img {
+  height: 31rem;
+}
+
+.text-container {
+  padding: 2.4rem;
+  min-width: 22rem;
+  max-width: 22rem;
+  background-color: #fff;
+}
+.perfume {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1.6rem;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--verydarkblue);
+
+  margin-bottom: 1.6rem;
+}
+.text-container p {
+  color: var(--darkgrayishblue);
+  font-weight: 400;
+
+  margin-bottom: 1.6rem;
+}
+
+.bold-number {
+  font-family: "Fraunces", serif;
+  color: var(--darkcyan);
+  margin-right: 1.8rem;
+  font-size: 2.4rem;
+}
+.crossed {
+  text-decoration: line-through;
+}
+.cost {
+  display: flex;
+  align-items: center;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  width: 100%;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: var(--darkcyan);
+  text-align: center;
+
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0 auto;
+  /* Put transition on original "state" */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: hsl(158, 45%, 17%);
+}
+
+.cart {
+  font-size: 1.2rem;
+  --ionicon-stroke-width: 64px;
+  margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+    width: 90%;
+    background-color: blueviolet;
+  }
+  .pic-container {
+    width: 100%;
+    height: 40vh;
+  }
+  .pic-container img {
+    width: 100%;
+  }
+
+  .text-container {
+    min-width: 100%;
+
+    letter-spacing: 2px;
+    line-height: 1.6;
+  }
+}
